@@ -168,6 +168,12 @@ h6,
     text-align: center;
     background: rgba(15, 66, 41, .6);
     z-index: 1;
+    animation: a 2s infinite linear;
+}
+@keyframes a{
+    100%{
+        filter: hue-rotate(60deg);
+    }
 }
 
 .carousel-control-prev,
@@ -520,4 +526,26 @@ h6,
 }
 .justify{
     text-align: justify;
+}
+
+.box-shadow{
+    position: absolute;
+    top:   50%;
+    left:  0%;
+    height:  0%;
+    width:  0%;
+    transition: 0.5s;
+    /* background-color: rgba(216, 10, 189, 0.192); */
+    background-color: #348e3859;
+    /* clip-path: polygon(0 0, 55% 0, 100% 47%, 61% 100%, 0 100%); */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    /* clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); */
+}
+.sh_box:hover .box-shadow{
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+ 
+
 }
