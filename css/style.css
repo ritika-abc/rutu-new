@@ -549,3 +549,8 @@ h6,
  
 
 }
+.boc{
+    background-image: url("../image/banner2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
