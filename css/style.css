@@ -186,8 +186,8 @@ h6,
     width: 3rem;
     height: 3rem;
     border-radius: 3rem;
-    background-color: var(--primary);
-    border: 10px solid var(--primary);
+    background-color: #006f83;
+    border: 10px solid #006f83;
 }
 
 @media (max-width: 768px) {
@@ -275,7 +275,7 @@ h6,
 }
 
 .service-item:hover .service-text {
-    background: rgba(15, 66, 41, .6);
+    background: #006f83;
 }
 
 .service-item .service-text h4,
@@ -296,6 +296,7 @@ h6,
     height: 100px;
     background: transparent;
     transition: .5s;
+    filter: hue-rotate(75deg);
 }
 
 .service-item:hover .service-text .btn-square {
@@ -472,8 +473,8 @@ h6,
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
-    background: var(--light);
+    color: white;
+    background: #006f8369;
     border-radius: 4px;
     font-size: 22px;
     transition: .5s;
@@ -481,7 +482,7 @@ h6,
 
 .testimonial-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover {
-    background: var(--primary);
+    background: #04515f;
     color: var(--light);
 }
 
@@ -514,7 +515,7 @@ h6,
 
 .copyright {
     color: var(--light);
-    background: #072A19;
+    background: #202020;
 }
 
 .copyright a {
@@ -550,7 +551,103 @@ h6,
 
 }
 .boc{
-    background-image: url("../image/banner2.jpg");
+    background-image: url("../image/banner/about.jpg");
     background-size: cover;
     background-attachment: fixed;
+}
+
+.img_box {
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.img_box img {
+    transition: 0.4s;
+    transform: scale(1) rotate(0deg);
+}
+
+.animation_box:hover img {
+    transition: 0.4s;
+    transform: scale(1.2) rotate(-10deg);
+}
+
+.animation_box {
+    transform: translateY(0px);
+    transition: 0.4s;
+
+}
+
+.animation_box:hover {
+    transform: translateY(-15px);
+    transition: 0.4s;
+    border: 2px solid rgb(0, 0, 0) !important;
+}
+
+.coconut-tree {
+    position: absolute;
+    top: 0%;
+    z-index: 10;
+    animation: ani 2s infinite linear;
+
+}
+
+.coconut-tree img {
+    animation: ani1 2s infinite ease-in;
+}
+
+@keyframes ani {
+    0% {
+        top: -10%;
+        transform: rotate(360deg);
+
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 100%;
+
+        transform: rotate(360deg);
+        opacity: 0;
+
+    }
+}
+
+@keyframes ani1 {
+    0% {
+
+        transform: rotate(0deg) translateX(0px);
+    }
+
+    100% {
+
+
+        transform: rotate(360deg) translateX(70px);
+    }
+}
+
+ 
+.bg3{
+    /* clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 50%); */
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 0% 50%);
+    background-image: url(../image/banner/about.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    animation: ani 12s infinite linear;
+}
+
+@keyframes ani{
+    0%{
+       transform: translateX(0px);
+
+    }
+    50%{
+        transform: translateX(50px);
+
+
+    }
 }
